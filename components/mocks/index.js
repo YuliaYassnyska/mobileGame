@@ -4,4 +4,6 @@ const medal = {
     bronze: require('../../assets/bronzeMedal.jpg')
 }
 
+
+
 export { medal } 
