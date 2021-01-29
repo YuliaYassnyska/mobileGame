@@ -68,7 +68,7 @@ const App = () => {
       <Stack.Screen name="LevelEight" component={LevelEight} />
       <Stack.Screen name="LevelNine" component={LevelNinth} />
       <Stack.Screen name="LevelTen" component={LevelTenth} />
-      <Stack.Screen name="Game" component={Game}/>
+      <Stack.Screen name="Game" component={Game} />
       <Stack.Screen name="RatingPage" component={RatingPage} />
       <Stack.Screen name="MainMenu" component={MainMenu} />
     </Stack.Navigator>
