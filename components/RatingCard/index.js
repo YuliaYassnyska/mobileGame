@@ -16,9 +16,10 @@ export default RatingCard
 
 const styles = StyleSheet.create({
     wrapper: {
-        width: 400,
+        maxWidth: 400,
+        minWidth: 200,
         height: 70,
-        backgroundColor: '#f8f1f1',
+        backgroundColor: '#f4eeff',
         borderRadius: 20,
         flexDirection: 'row',
         marginBottom: 16,
@@ -28,17 +29,19 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 16,
         fontWeight: 'bold',
-        marginLeft: 16
+        marginLeft: 16,
+        color: '#424874'
     },
     num: {
         fontSize: 23,
         fontWeight: 'bold',
-        marginLeft: 16
+        marginLeft: 16,
+        color: '#424874'
     },
     image: {
         width: 40,
         height: 40,
-        backgroundColor: '#f8f1f1',
+        backgroundColor: '#f4eeff',
         marginRight: 16
     },
     contain: {
