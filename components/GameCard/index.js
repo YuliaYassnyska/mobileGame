@@ -12,7 +12,7 @@ export default class Card extends React.Component {
 
         let CardSource = FontAwesome;
         let icon_name = 'question-circle';
-        let icon_color = '#393939';
+        let icon_color = '#424874';
 
         if (this.props.is_open) {
             CardSource = this.props.src;
@@ -22,7 +22,7 @@ export default class Card extends React.Component {
 
         return (
             <View style={styles.card}>
-                <TouchableHighlight onPress={this.props.clickCard} activeOpacity={0.75} underlayColor={"#f1f1f1"}>
+                <TouchableHighlight onPress={this.props.clickCard} activeOpacity={0.75} underlayColor={"#424874"}>
                     <CardSource
                         name={icon_name}
                         size={50}
@@ -41,6 +41,7 @@ export default class Card extends React.Component {
 const styles = StyleSheet.create({
     card: {
         flex: 1,
+        justifyContent: 'center',
         alignItems: 'center'
     },
     card_text: {
