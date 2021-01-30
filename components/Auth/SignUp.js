@@ -5,11 +5,6 @@ import firebase from '../firebase'
 import {
   TextInput,
   Button,
-  Snackbar,
-  Portal,
-  Dialog,
-  Paragraph,
-  Provider as PaperProvider
 } from "react-native-paper";
 
 
