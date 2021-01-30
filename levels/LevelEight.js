@@ -111,16 +111,26 @@ export default class LevelEight extends React.Component {
                         title="Reset"
                         color="#424874"
                     />
-                    <Button 
+                </View>
+                <View style={styles.butt}>
+                    <Button
                         title="Next level"
                         color="#424874"
                         onPress={() => this.props.navigation.navigate('LevelNine')}
                     />
-                     <Button 
+                </View>
+                <View style={styles.butt}>
+                    <Button
                         title="Menu"
                         color="#424874"
                         onPress={() => this.props.navigation.navigate('MainMenu')}
                     />
+                </View>
+                <View style={styles.butt}>
+                    <Button
+                        title="Save score"
+                        color="#424874"
+                        onPress={() => this.saveScore} />
                 </View>
             </View>
         );

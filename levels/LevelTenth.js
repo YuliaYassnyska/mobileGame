@@ -120,16 +120,19 @@ export default class LevelTenth extends React.Component {
                         title="Reset"
                         color="#424874"
                     />
-                     <Button 
+                </View>
+                <View style={styles.butt}>
+                    <Button
                         title="Menu"
                         color="#424874"
                         onPress={() => this.props.navigation.navigate('MainMenu')}
                     />
-                     <Button 
-                        title="Menu"
+                </View>
+                <View style={styles.butt}>
+                    <Button
+                        title="Save score"
                         color="#424874"
-                        onPress={() => this.props.navigation.navigate('MainMenu')}
-                    />
+                        onPress={() => this.saveScore} />
                 </View>
             </View>
         );
