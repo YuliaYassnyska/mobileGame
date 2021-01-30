@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, TextInput, Button, Alert, ActivityIndicator } from 'react-native'
+import { Text, StyleSheet, View,  Alert, ActivityIndicator } from 'react-native'
 import firebase from '../firebase'
+
+import {
+  TextInput,
+  Button,
+  Snackbar,
+  Portal,
+  Dialog,
+  Paragraph,
+  Provider as PaperProvider
+} from "react-native-paper";
 
 export default class Login extends Component {
   
@@ -109,11 +119,10 @@ export default class Login extends Component {
             {this.state.passwordError ? 'Error with password' : ''}
           </Text>  
           <Button
-            color="#ff5722"
-            title="Signin"
+            color="#621FF7"
+            mode='contained'
             onPress={() => this.userLogin()}
-            />   
-  
+            >Login</Button>   
           <Text 
             style={styles.loginText}
             onPress={() => this.props.navigation.navigate('SignUp')}>
@@ -126,6 +135,7 @@ export default class Login extends Component {
       );
     }
   }
+  
 
   const styles = StyleSheet.create({
     container: {
@@ -133,16 +143,17 @@ export default class Login extends Component {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      padding: 35,
+      padding: 20,
       backgroundColor: '#fff'
     },
     inputStyle: {
-      width: '100%',
       marginBottom: 15,
       paddingBottom: 15,
       alignSelf: "center",
       borderColor: "#ccc",
-      borderBottomWidth: 1
+      borderBottomWidth: 1,
+      width: '100%',
+      height: '5%'
     },
     loginText: {
       color: '#333333',
@@ -171,3 +182,4 @@ export default class Login extends Component {
     },
   });
 
+  

@@ -1,7 +1,16 @@
 import React, { Component } from 'react'
-import { Text,StyleSheet,  View, TextInput, Button, Alert, ActivityIndicator } from 'react-native'
+import { Text,StyleSheet,  View, ActivityIndicator } from 'react-native'
 import firebase from '../firebase'
 
+import {
+  TextInput,
+  Button,
+  Snackbar,
+  Portal,
+  Dialog,
+  Paragraph,
+  Provider as PaperProvider
+} from "react-native-paper";
 
 
 export default class SignUp extends Component {
@@ -30,9 +39,7 @@ export default class SignUp extends Component {
       const email = this.emailVadidation()
       const password = this.passwordValidation()
       if (name && phone && email && password) {
-        firebase
-        .auth
-        .createUserWithEmailAndPassword(this.state.email, this.state.password)
+        firebase.auth.createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then((res) => {
           res.user.updateProfile({
             displayName: this.state.name,
@@ -164,10 +171,10 @@ export default class SignUp extends Component {
             {this.state.passwordError ? 'Error with password' : ''}
           </Text>   
           <Button
-            color="#ff5722"
-            title="SignUp"
+            color="#621FF7"
+            mode='contained'
             onPress={() => this.signup()}
-          />
+            >Sign up</Button> 
   
           <Text 
             style={styles.loginText}
@@ -177,24 +184,25 @@ export default class SignUp extends Component {
         </View>
       );
     }
-  }
-  
-  const styles = StyleSheet.create({
+}
+
+const styles = StyleSheet.create({
     container: {
       flex: 1,
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
-      padding: 35,
+      padding: 20,
       backgroundColor: '#fff'
     },
     inputStyle: {
-      width: '100%',
       marginBottom: 15,
       paddingBottom: 15,
       alignSelf: "center",
       borderColor: "#ccc",
-      borderBottomWidth: 1
+      borderBottomWidth: 1,
+      width: '100%',
+      height: '5%'
     },
     loginText: {
       color: '#333333',
