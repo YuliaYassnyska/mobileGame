@@ -7,6 +7,9 @@ import Card from '../components/GameCard';
 
 import helpers from './helpers';
 
+
+import firebase from '../components/firebase'
+
 export default class LevelEight extends React.Component {
 
     constructor(props) {
@@ -237,7 +240,23 @@ export default class LevelEight extends React.Component {
 
         return contents_r;
     }
+    saveScore = () => {
+        if (this.state.score > 0) {
+            firebase.db.collection('score').doc('PB959oJmX6IAKuYxUzGB').update({
+                levelEight: true
+            }).catch(function (error) {
+                console.log("Error getting document:", error);
+            });
+        } else {
+            firebase.db.collection('score').doc('PB959oJmX6IAKuYxUzGB').update({
+                levelEight: false
+            }).catch(function (error) {
+                console.log("Error getting document:", error);
+            });
+        }
 
+
+    }
 }
 
 const styles = StyleSheet.create({

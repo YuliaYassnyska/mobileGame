@@ -7,6 +7,8 @@ import Card from '../components/GameCard';
 
 import helpers from './helpers';
 
+import firebase from '../components/firebase'
+
 export default class LevelFourth extends React.Component {
 
     constructor(props) {
@@ -190,6 +192,23 @@ export default class LevelFourth extends React.Component {
                 cards: cards,
                 current_selection: current_selection
             });
+
+        }
+        saveScore = () => {
+            if (this.state.score > 0) {
+                firebase.db.collection('score').doc('PB959oJmX6IAKuYxUzGB').update({
+                    levelFour: true
+                }).catch(function (error) {
+                    console.log("Error getting document:", error);
+                });
+            } else {
+                firebase.db.collection('score').doc('PB959oJmX6IAKuYxUzGB').update({
+                    levelFour: false
+                }).catch(function (error) {
+                    console.log("Error getting document:", error);
+                });
+            }
+
 
         }
 
