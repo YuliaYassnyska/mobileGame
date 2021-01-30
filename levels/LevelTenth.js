@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 import { Ionicons, FontAwesome, Entypo } from '@expo/vector-icons'; // 6.2.2
 
-import Header from '../components/Header';
 import Score from '../components/Score';
 import Card from '../components/GameCard';
 
@@ -107,18 +106,19 @@ export default class LevelTenth extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Header />
                 <View style={styles.body}>
                     {
                         this.renderRows.call(this)
                     }
                 </View>
                 <Score score={this.state.score} />
-                <Button
-                    onPress={this.resetCards}
-                    title="Reset"
-                    color="#008CFA"
-                />
+                <View style={styles.butt}>
+                    <Button
+                        onPress={this.resetCards}
+                        title="Reset"
+                        color="#424874"
+                    />
+                </View>
             </View>
         );
     }
@@ -244,11 +244,19 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignSelf: 'stretch',
-        backgroundColor: '#fff'
+        backgroundColor: '#a6b1e1'
     },
     row: {
         flex: 1,
         flexDirection: 'row'
+    },
+    butt: {
+        borderStyle: 'solid',
+        borderWidth: 2,
+        borderColor: '#424874',
+        maxWidth: 200,
+        marginBottom: 20,
+        marginLeft: 90
     },
     body: {
         flex: 18,

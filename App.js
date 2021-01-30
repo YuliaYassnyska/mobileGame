@@ -17,6 +17,7 @@ import SignUp from './components/Auth/SignUp'
 import Login from './components/Auth/LoginScreen'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import MainMenu from './components/MainMenu';
 
 
 // export const CountContext = React.createContext()
@@ -67,8 +68,9 @@ const App = () => {
       <Stack.Screen name="LevelEight" component={LevelEight} />
       <Stack.Screen name="LevelNine" component={LevelNinth} />
       <Stack.Screen name="LevelTen" component={LevelTenth} />
-      <Stack.Screen name="Game" component={Game}/>
+      <Stack.Screen name="Game" component={Game} />
       <Stack.Screen name="RatingPage" component={RatingPage} />
+      <Stack.Screen name="MainMenu" component={MainMenu} />
     </Stack.Navigator>
   </NavigationContainer>
   // (<CountContext.Provider value={{ countContext: count, countDispatch: dispatch }}>
