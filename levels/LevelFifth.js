@@ -93,6 +93,11 @@ export default class LevelFifth extends React.Component {
                         color="#424874"
                         onPress={() => this.props.navigation.navigate('LevelSix')}
                     />
+                     <Button 
+                        title="Menu"
+                        color="#424874"
+                        onPress={() => this.props.navigation.navigate('MainMenu')}
+                    />
                 </View>
             </View>
         );
