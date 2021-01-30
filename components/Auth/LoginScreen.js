@@ -49,7 +49,7 @@ export default class Login extends Component {
             password: '',
             errorMessage: ''
         })
-        this.props.navigation.navigate('Game')
+        this.props.navigation.navigate('MainMenu')
         })
         .catch(error => this.setState({ errorMessage: error.message }))
       }else {

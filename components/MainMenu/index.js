@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import { Button, View, StyleSheet } from "react-native";
 import MarginView from '../Common/MarginView';
+import firebase from '../firebase'
 
 export default class MainMenu extends Component {
+
+
+  signOut = () => {
+    firebase.auth.signOut().then(() => {
+      this.props.navigation.navigate('Login')
+    })
+    .catch(error => this.setState({ errorMessage: error.message }))
+  }  
+
+
   render() {
     return (
       <View style={styles.container}>
@@ -30,7 +41,7 @@ export default class MainMenu extends Component {
               color="#424874"
               backgroundColor='#424874'
               title="Exit"
-              onPress={() => this.props.navigation.navigate('Login')}
+              onPress={() => this.signOut()}
             />
           </View>
         </View>
