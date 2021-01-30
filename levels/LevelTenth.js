@@ -118,6 +118,11 @@ export default class LevelTenth extends React.Component {
                         title="Reset"
                         color="#424874"
                     />
+                     <Button 
+                        title="Menu"
+                        color="#424874"
+                        onPress={() => this.props.navigation.navigate('MainMenu')}
+                    />
                 </View>
             </View>
         );
