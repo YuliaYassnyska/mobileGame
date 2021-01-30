@@ -91,6 +91,16 @@ export default class LevelFifth extends React.Component {
                         title="Reset"
                         color="#424874"
                     />
+                     <Button 
+                        title="Next level"
+                        color="#424874"
+                        onPress={() => this.props.navigation.navigate('LevelSix')}
+                    />
+                     <Button 
+                        title="Menu"
+                        color="#424874"
+                        onPress={() => this.props.navigation.navigate('MainMenu')}
+                    />
                 </View>
             </View>
         );

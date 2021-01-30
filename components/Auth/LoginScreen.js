@@ -48,8 +48,8 @@ export default class Login extends Component {
             email: '',
             password: '',
             errorMessage: ''
-          })
-          this.props.navigation.navigate('MainMenu')
+        })
+        this.props.navigation.navigate('MainMenu')
         })
         .catch(error => this.setState({ errorMessage: error.message }))
     } else {
